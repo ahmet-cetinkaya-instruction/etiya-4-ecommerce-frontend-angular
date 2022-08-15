@@ -1,6 +1,6 @@
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   templateUrl: './login.component.html',
@@ -24,11 +24,11 @@ export class LoginComponent implements OnInit {
     });
   }
   login() {
-    this.authService.login(this.loginForm.value).subscribe((response) => {
-      console.log(response);
-      if (response.success) {
-        this.authService.saveToken(response);
-      }
+    this.authService.login(this.loginForm.value).subscribe(response => {
+      console.log(response, new Date().toISOString());
+      // if (response.success) {
+      //   this.authService.saveToken(response);
+      // }
     });
   }
 }
