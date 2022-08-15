@@ -7,6 +7,8 @@ import {DashboardLayoutComponent} from './layouts/dashboard-layout/dashboard-lay
 import {CardSkeletonComponent} from './components/card-skeleton/card-skeleton.component';
 import {CoreModule} from '../core/core.module';
 import {RouterModule} from '@angular/router';
+import { FooterComponent } from './components/footer/footer.component';
+import { DashboardHomeComponent } from './pages/dashboard-home/dashboard-home.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import {RouterModule} from '@angular/router';
     MainLayoutComponent,
     DashboardLayoutComponent,
     CardSkeletonComponent,
+    FooterComponent,
+    DashboardHomeComponent,
   ],
   imports: [CommonModule, SkeletonModule, CoreModule, RouterModule],
   exports: [
